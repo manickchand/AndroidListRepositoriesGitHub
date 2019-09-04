@@ -1,4 +1,4 @@
-package com.manickchand.androidlistrepositoriesgithub.DAO;
+package com.manickchand.androidlistrepositoriesgithub.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

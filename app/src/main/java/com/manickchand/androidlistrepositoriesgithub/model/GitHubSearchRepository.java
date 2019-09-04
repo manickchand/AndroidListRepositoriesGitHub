@@ -1,4 +1,4 @@
-package com.manickchand.androidlistrepositoriesgithub.DAO;
+package com.manickchand.androidlistrepositoriesgithub.model;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 // GENERATED IN http://www.jsonschema2pojo.org/
 */
 
-public class GitHubSearchRepositoryDAO {
+public class GitHubSearchRepository {
 
     @SerializedName("total_count")
     @Expose

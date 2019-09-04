@@ -1,11 +1,14 @@
-package com.manickchand.androidlistrepositoriesgithub.DAO;
+package com.manickchand.androidlistrepositoriesgithub.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /*
 // GENERATED IN http://www.jsonschema2pojo.org/
 */
-public class Item {
+public class Item implements Serializable {
 
     @SerializedName("id")
     @Expose
