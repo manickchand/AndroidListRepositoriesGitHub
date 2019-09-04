@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_item_list_text">8dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="item_row_card_heigth">164dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+
+    <dimen name="font_lan">18sp</dimen>
+</resources>
