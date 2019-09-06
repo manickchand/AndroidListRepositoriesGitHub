@@ -1,6 +1,5 @@
 package com.manickchand.androidlistrepositoriesgithub.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,7 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.MyViewHolder> {
 
     private List<Item> mlist;
     private LayoutInflater mlayoutInflater;
-    private RecyclerViewOnClickListenerHack mReciclerViewOnClickListenerHack;
+    private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
     private View view;
 
     public AdapterRV(Context context, List<Item> list) {
@@ -49,8 +48,8 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.MyViewHolder> {
         return mlist.size();
     }
 
-    public void setReciclerViewOnClickListenerHack(RecyclerViewOnClickListenerHack r) {
-        mReciclerViewOnClickListenerHack = r;
+    public void setRecyclerViewOnClickListenerHack(RecyclerViewOnClickListenerHack r) {
+        mRecyclerViewOnClickListenerHack = r;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -71,8 +70,8 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.MyViewHolder> {
 
         @Override
         public void onClick(View v) {
-            if (mReciclerViewOnClickListenerHack != null) {
-                mReciclerViewOnClickListenerHack.onClickListener(v, getPosition());
+            if (mRecyclerViewOnClickListenerHack != null) {
+                mRecyclerViewOnClickListenerHack.onClickListener(v, getPosition());
             }
         }
     }

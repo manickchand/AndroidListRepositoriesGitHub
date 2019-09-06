@@ -9,11 +9,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.manickchand.androidlistrepositoriesgithub.adapters.AdapterRV;
 import com.manickchand.androidlistrepositoriesgithub.interfaces.IserviceRetrofit;
 import com.manickchand.androidlistrepositoriesgithub.interfaces.RecyclerViewOnClickListenerHack;
@@ -26,6 +21,10 @@ import com.manickchand.androidlistrepositoriesgithub.util.RetrofitInit;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,7 +33,7 @@ import retrofit2.Retrofit;
 public class MainActivity extends AppCompatActivity implements RecyclerViewOnClickListenerHack {
 
     private Toolbar toolbar;
-    private IserviceRetrofit iserviceRetrofit; //interface com metodos de requiziicoes
+    private IserviceRetrofit iserviceRetrofit; //interface com metodos de requisicoes
     private Retrofit retrofit;
     private RecyclerView rv;
     private List<Item> mlist;
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewOnCli
         checkNetworkState();
     }
 
+    //Verifica se tem conexão com a internet
     private void checkNetworkState() {
         HasConnection connection = new HasConnection();
         if(connection.networkStatus(this)){
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewOnCli
         }
     }
 
+    //chama método getReposotories
     private void requestRepositories() {
 
         String repositoryFilter = this.filter+"+language:"+this.language;
@@ -144,20 +145,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewOnCli
         return super.onOptionsItemSelected(item);
     }
 
-
+    //inicializa e seta adapter no Recycler
     private void setAdapter(){
         AdapterRV adapter = new AdapterRV( this, mlist);
-        adapter.setReciclerViewOnClickListenerHack(this);
+        adapter.setRecyclerViewOnClickListenerHack(this);
         rv.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
-        rv.setVisibility(View.VISIBLE);
     }
 
-    //Vai para tela de detalhes ao clicar
+    //Vai para tela de detalhes ao clicar em um item
     @Override
     public void onClickListener(View v, int position) {
         Intent intent = new Intent(this,DetailsActivity.class);
-        intent.putExtra("item", mlist.get(position));
+        intent.putExtra(Constants.STR_ITEM, mlist.get(position));
         startActivity(intent);
     }
 }

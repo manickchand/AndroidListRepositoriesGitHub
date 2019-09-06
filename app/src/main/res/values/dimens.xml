@@ -7,8 +7,7 @@
     <dimen name="dimen_18">18dp</dimen>
 
     <dimen name="font_lan">18sp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="image_detail_dimen">90dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_detail">22sp</dimen>
     <dimen name="text_detail_value">16sp</dimen>
