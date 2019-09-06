@@ -30,6 +30,17 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="@dimen/margin_default"
+                android:layout_marginBottom="@dimen/margin_default"
+                app:layout_anchor="@id/app_bar"
+                app:layout_anchorGravity="bottom|end"/>
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
