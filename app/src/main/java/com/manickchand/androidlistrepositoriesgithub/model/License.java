@@ -3,10 +3,12 @@ package com.manickchand.androidlistrepositoriesgithub.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /*
 // GENERATED IN http://www.jsonschema2pojo.org/
 */
-public class License {
+public class License implements Serializable {
 
     @SerializedName("key")
     @Expose

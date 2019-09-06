@@ -1,5 +1,6 @@
 package com.manickchand.androidlistrepositoriesgithub.model;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 // GENERATED IN http://www.jsonschema2pojo.org/
 */
 
-public class GitHubSearchRepository {
+public class GitHubSearchRepository implements Serializable {
 
     @SerializedName("total_count")
     @Expose

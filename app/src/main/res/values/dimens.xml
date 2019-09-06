@@ -3,8 +3,11 @@
     <dimen name="margin_item_list_text">8dp</dimen>
     <dimen name="padding_default">16dp</dimen>
     <dimen name="item_row_card_heigth">126dp</dimen>
-    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_26">26dp</dimen>
     <dimen name="dimen_18">18dp</dimen>
 
     <dimen name="font_lan">18sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

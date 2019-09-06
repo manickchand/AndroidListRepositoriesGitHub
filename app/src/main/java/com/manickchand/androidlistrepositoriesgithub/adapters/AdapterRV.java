@@ -17,20 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.MyViewHolder> {
 
-
     private List<Item> mlist;
     private LayoutInflater mlayoutInflater;
     private RecyclerViewOnClickListenerHack mReciclerViewOnClickListenerHack;
-    private Context mcontext;
-    private RecyclerView rv;
     private View view;
-    private Activity ac;
 
-    public AdapterRV(Context c, List<Item> l,Activity ac) {
-        this.mlist = l;
-        this.mlayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.mcontext = c;
-        this.ac = ac;
+    public AdapterRV(Context context, List<Item> list) {
+        this.mlist = list;
+        this.mlayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -60,7 +54,6 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
 
         public TextView tv_repo_name, tv_repo_description, tv_repo_lang, tv_start_count ;
 

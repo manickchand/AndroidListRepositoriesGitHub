@@ -4,9 +4,10 @@ import com.manickchand.androidlistrepositoriesgithub.model.GitHubSearchRepositor
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface IserviceRetrofit {
 
-    @GET("/search/repositories?q=android+language:java&sort=stars&order=desc")
-    Call<GitHubSearchRepository> getTrendingRepositoriesAndroid();
+    @GET("/search/repositories")
+    Call<GitHubSearchRepository> getTrendingRepositoriesAndroid(@Query("q")String filter, @Query("sort")String sort, @Query("order")String order);
 }
